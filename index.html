@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeuralFlow AI - Ihr Partner für KI-Transformation</title>
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("5KL6hIJnM36aMQP6f"); // Your EmailJS public key
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         /* Footer */
@@ -17,16 +17,6 @@
             background: #000;
             text-align: center;
             border-top: 1px solid var(--border);
-        })();
-    </script>function(){
-            emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-        })();
-    </script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
         :root {
@@ -114,13 +104,11 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 5%;
+            padding: 130px 0 100px;
+            text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 600px;
         }
 
         .hero::before {
@@ -130,7 +118,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(ellipse at center, rgba(0, 113, 227, 0.08) 0%, transparent 70%);
+            background: radial-gradient(ellipse at center, rgba(0, 113, 227, 0.15) 0%, transparent 70%);
             animation: rotate 30s linear infinite;
         }
 
@@ -140,85 +128,61 @@
         }
 
         .hero-content {
-            max-width: 1400px;
-            width: 100%;
+            max-width: 980px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            padding: 0 22px;
             position: relative;
             z-index: 1;
+            padding-right: 400px;
         }
 
-        .hero-text {
-            text-align: left;
+        @media (max-width: 1200px) {            
+            .ai-brain {
+                width: 400px;
+                right: 2%;
+            }
         }
 
-        .hero-text h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+        @media (max-width: 1024px) {
+            .ai-brain {
+                width: 350px;
+                opacity: 0.5;
+            }
+        }
+
+        .hero h1 {
+            font-size: 56px;
             line-height: 1.07143;
             font-weight: 600;
             letter-spacing: -0.005em;
-            margin-bottom: 1.5rem;
+            margin-bottom: 24px;
             background: linear-gradient(180deg, #ffffff 0%, #86868b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: slideInLeft 1s ease-out;
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            line-height: 1.4;
+            font-size: 28px;
+            line-height: 1.14286;
             font-weight: 400;
+            letter-spacing: 0.007em;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
-            animation: slideInLeft 1s ease-out 0.2s both;
+            margin-bottom: 40px;
+        }
+
+        .hero-description {
+            font-size: 19px;
+            line-height: 1.4;
+            color: var(--text-secondary);
+            max-width: 720px;
+            margin: 0 auto 50px;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
-            animation: slideInLeft 1s ease-out 0.4s both;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 60px 0;
-            background: var(--secondary);
-            text-align: center;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 22px;
-        }
-
-        .about-content h2 {
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            background: linear-gradient(180deg, #ffffff 0%, #86868b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .about-content p {
-            font-size: 19px;
-            line-height: 1.5;
-            color: var(--text-secondary);
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -452,66 +416,7 @@
             resize: vertical;
         }
 
-        /* AI Brain Visualization */
-        .ai-brain {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: slideInRight 1s ease-out;
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .brain-core {
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(0, 113, 227, 0.4), transparent);
-            border-radius: 50%;
-            position: relative;
-            animation: pulse 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { 
-                transform: scale(1); 
-                opacity: 0.8; 
-            }
-            50% { 
-                transform: scale(1.1); 
-                opacity: 1; 
-            }
-        }
-
-        .neural-node {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: var(--accent);
-            border-radius: 50%;
-            box-shadow: 0 0 20px var(--accent);
-            animation: orbit 10s linear infinite;
-        }
-
-        @keyframes orbit {
-            from { 
-                transform: rotate(0deg) translateX(150px) rotate(0deg); 
-            }
-            to { 
-                transform: rotate(360deg) translateX(150px) rotate(-360deg); 
-            }
-        }
+        /* Footer */
         footer {
             padding: 40px 0;
             background: #000;
@@ -554,39 +459,12 @@
                 display: none;
             }
 
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text {
-                text-align: center;
-            }
-
-            .hero-text h1 {
+            .hero h1 {
                 font-size: 40px;
             }
 
             .hero-subtitle {
                 font-size: 24px;
-            }
-
-            .cta-buttons {
-                justify-content: center;
-            }
-
-            .ai-brain {
-                height: 300px;
-            }
-
-            .brain-core {
-                width: 150px;
-                height: 150px;
-            }
-
-            .neural-node {
-                width: 15px;
-                height: 15px;
             }
 
             .section-header h2 {
@@ -596,6 +474,10 @@
             .features-grid,
             .use-case-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .tech-logos {
+                gap: 30px;
             }
         }
 
@@ -636,35 +518,17 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="fade-in">KI-Transformation für Ihr Unternehmen</h1>
-                <p class="hero-subtitle fade-in fade-in-delay-1">
-                    Automatisierung, die sich rechnet. Ab dem ersten Tag.
-                </p>
-                <div class="cta-buttons fade-in fade-in-delay-2">
-                    <a href="#pricing" class="btn btn-primary">Kostenlose Erstberatung</a>
-                    <a href="#use-cases" class="btn btn-secondary">Anwendungsfälle</a>
-                </div>
-            </div>
-            <!-- AI Brain Visualization -->
-            <div class="ai-brain">
-                <div class="brain-core"></div>
-                <div class="neural-node" style="animation-delay: 0s;"></div>
-                <div class="neural-node" style="animation-delay: 2s;"></div>
-                <div class="neural-node" style="animation-delay: 4s;"></div>
-                <div class="neural-node" style="animation-delay: 6s;"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <h2>Ihre KI-Experten aus München</h2>
-                <p>Als Münchner KI-Beratung verstehen wir die Herausforderungen des deutschen Mittelstands. 
-                Wir implementieren intelligente Automatisierungen, die sofort messbare Ergebnisse liefern – 
-                von 80% schnellerer Angebotserstellung bis zu 5 Stunden Zeitersparnis pro Woche in der Administration.</p>
+            <h1 class="fade-in">KI-Transformation für Ihr Unternehmen</h1>
+            <p class="hero-subtitle fade-in fade-in-delay-1">
+                Automatisieren Sie Routineaufgaben. Steigern Sie Effizienz.
+            </p>
+            <p class="hero-description fade-in fade-in-delay-2">
+                Wir bringen künstliche Intelligenz in kleine und mittelständische Unternehmen. 
+                Von der Rechnungserstellung bis zur Routenplanung – wir machen Ihr Geschäft intelligenter.
+            </p>
+            <div class="cta-buttons fade-in fade-in-delay-3">
+                <a href="#pricing" class="btn btn-primary">Kostenlose Erstberatung</a>
+                <a href="#use-cases" class="btn btn-secondary">Anwendungsfälle</a>
             </div>
         </div>
     </section>
@@ -674,7 +538,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Unsere KI-Lösungen</h2>
-                <p>Maßgeschneiderte Automatisierung für Ihren Geschäftserfolg</p>
+                <p>Maßgeschneiderte Automatisierung für Ihr Geschäft</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card fade-in">
@@ -700,33 +564,57 @@
     <section class="use-cases" id="use-cases">
         <div class="container">
             <div class="section-header">
-                <h2>Praxisbeispiele aus Bayern</h2>
-                <p>Präzise KI-Lösungen für den deutschen Mittelstand</p>
+                <h2>Praxisbeispiele</h2>
+                <p>So transformiert KI verschiedene Branchen</p>
             </div>
             <div class="use-case-grid">
                 <div class="use-case fade-in">
-                    <h4>🔧 Sanitär- & Heizungsbetriebe</h4>
-                    <p>Kostenvoranschläge direkt beim Kunden erstellen – sprechen Sie einfach ins Handy. KI wandelt Ihre Notizen in professionelle Angebote um. Material- und Arbeitsstunden automatisch berechnet, DIN-konform formatiert.</p>
+                    <h4>🔧 Handwerksbetriebe</h4>
+                    <p>Automatische Angebotserstellung aus Sprachnotizen vor Ort. Rechnungen direkt nach Auftragsabschluss generiert.</p>
                 </div>
                 <div class="use-case fade-in fade-in-delay-1">
-                    <h4>🚚 Spedition & Logistik</h4>
-                    <p>Optimale Tourenplanung unter Berücksichtigung von Ruhezeiten, Mautkosten und Lieferfenstern. Automatische CMR-Frachtbrief-Erstellung und digitale Fahrtenbücher nach deutschen Vorschriften.</p>
+                    <h4>🚚 Transportunternehmen</h4>
+                    <p>Intelligente Routenplanung mit Zwischenstopps. Automatische Fahrtenbuchführung und Abrechnungserstellung.</p>
                 </div>
                 <div class="use-case fade-in fade-in-delay-2">
-                    <h4>🏗️ Bauunternehmen & Handwerk</h4>
-                    <p>VOB-konforme Angebotserstellung aus Baustellennotizen. Fotodokumentation mit KI-gestützter Mängelerkennung. Automatische Aufmaße aus Sprachprotokollen für schnellere Abrechnung.</p>
+                    <h4>🏗️ Bauunternehmen</h4>
+                    <p>Kostenvoranschläge aus handschriftlichen Notizen. Projektdokumentation durch Sprachaufnahmen auf der Baustelle.</p>
                 </div>
                 <div class="use-case fade-in">
-                    <h4>🏨 Hotels & Gastronomie</h4>
-                    <p>Mehrsprachiger Reservierungs-Chatbot für internationale Gäste. Automatische Speisekarten-Übersetzung und Allergenkennzeichnung nach LMIV. Intelligente Preisgestaltung basierend auf Auslastung.</p>
+                    <h4>🏨 Gastgewerbe</h4>
+                    <p>KI-Agent für günstigste Hotelbuchungen. Chatbot für Kundenanfragen rund um die Uhr.</p>
                 </div>
                 <div class="use-case fade-in fade-in-delay-1">
-                    <h4>🏪 Einzelhandel & E-Commerce</h4>
-                    <p>Automatische Produktbeschreibungen für Online-Shops. KI-gestützte Inventur mit Bestellvorschlägen. DSGVO-konforme Kundenkommunikation rund um die Uhr.</p>
+                    <h4>📦 Einzelhandel</h4>
+                    <p>Automatische Bestandsverwaltung. Kundenservice-Bot für häufige Fragen und Bestellungen.</p>
                 </div>
                 <div class="use-case fade-in fade-in-delay-2">
-                    <h4>⚕️ Arztpraxen & Gesundheit</h4>
-                    <p>Terminvergabe per Sprach-KI außerhalb der Öffnungszeiten. Automatische Recall-Systeme für Vorsorgeuntersuchungen. Dokumentation nach QM-Richtlinien mit Spracherkennung.</p>
+                    <h4>💼 Beratung & Dienstleistung</h4>
+                    <p>Terminplanung durch KI-Assistenten. Automatische Protokollerstellung aus Meeting-Aufzeichnungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Modernste KI-Technologie</h2>
+                <p>Wir arbeiten mit den führenden KI-Modellen</p>
+            </div>
+            <div class="tech-logos">
+                <div class="tech-item">
+                    <div class="tech-name">GPT-4</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">Claude 3.5</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">Whisper</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">Gemini</div>
                 </div>
             </div>
         </div>
@@ -747,7 +635,7 @@
                     <li>✓ Analyse Ihrer Geschäftsprozesse</li>
                     <li>✓ Identifikation von Automatisierungspotenzial</li>
                     <li>✓ Maßgeschneiderte Lösungsvorschläge</li>
-                    <li>✓ Transparente Kostenschätzung </li>
+                    <li>✓ Transparente Kostenschätzung nach deutschem Standard</li>
                     <li>✓ Live-Demonstration möglicher Lösungen</li>
                 </ul>
                 <a href="#contact" class="btn btn-primary">Jetzt Termin vereinbaren</a>
@@ -762,7 +650,7 @@
                 <h2>Lassen Sie uns sprechen</h2>
                 <p>Erzählen Sie uns von Ihren Herausforderungen</p>
             </div>
-            <form class="contact-form" id="contact-form">
+            <form class="contact-form">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
@@ -783,8 +671,7 @@
                     <label for="message">Ihre Nachricht</label>
                     <textarea id="message" name="message" placeholder="Beschreiben Sie kurz, wobei wir Ihnen helfen können..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" id="submit-btn">Nachricht senden</button>
-                <div id="form-status" style="margin-top: 20px; text-align: center; display: none;"></div>
+                <button type="submit" class="btn btn-primary">Nachricht senden</button>
             </form>
         </div>
     </section>
@@ -798,114 +685,135 @@
                 <a href="#pricing">Beratung</a>
                 <a href="#contact">Kontakt</a>
             </div>
-            <p class="footer-copyright">© 2024 NeuralFlow AI München. Deutsche Präzision für intelligente Geschäftsprozesse.</p>
+            <p class="footer-copyright">© 2024 NeuralFlow AI. Ihr Partner für intelligente Geschäftsprozesse.</p>
         </div>
     </footer>
 
     <script>
-        // EmailJS Form Submission
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const submitBtn = document.getElementById('submit-btn');
-            const formStatus = document.getElementById('form-status');
-            
-            // Disable submit button and show loading state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Wird gesendet...';
-            
-            // Prepare template parameters
-            const templateParams = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                company: document.getElementById('company').value || 'Nicht angegeben',
-                phone: document.getElementById('phone').value || 'Nicht angegeben',
-                message: document.getElementById('message').value,
-                to_email: 'firas.khedhiri@icloud.com'
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('service_eul2je5', 'template_57i9ce9', templateParams)
-                .then(function(response) {
-                    // Success
-                    formStatus.style.display = 'block';
-                    formStatus.style.color = '#00d4ff';
-                    formStatus.innerHTML = '✓ Nachricht erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden bei Ihnen.';
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if form exists before adding listener
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
                     
-                    // Reset form
-                    document.getElementById('contact-form').reset();
+                    const submitBtn = document.getElementById('submit-btn');
+                    const formStatus = document.getElementById('form-status');
                     
-                    // Reset button
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Nachricht senden';
+                    if (!submitBtn || !formStatus) {
+                        console.error('Form elements not found');
+                        return;
+                    }
                     
-                    // Hide status message after 5 seconds
-                    setTimeout(() => {
-                        formStatus.style.display = 'none';
-                    }, 5000);
-                }, function(error) {
-                    // Error
-                    formStatus.style.display = 'block';
-                    formStatus.style.color = '#ff6b6b';
-                    formStatus.innerHTML = '✕ Fehler beim Senden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt: firas.khedhiri@icloud.com';
+                    // Disable submit button and show loading state
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Wird gesendet...';
                     
-                    // Reset button
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Nachricht senden';
+                    // Prepare template parameters
+                    const templateParams = {
+                        from_name: document.getElementById('name').value,
+                        from_email: document.getElementById('email').value,
+                        company: document.getElementById('company').value || 'Nicht angegeben',
+                        phone: document.getElementById('phone').value || 'Nicht angegeben',
+                        message: document.getElementById('message').value,
+                        to_email: 'firas.khedhiri@icloud.com'
+                    };
                     
-                    console.error('EmailJS error:', error);
+                    // Send email using EmailJS
+                    emailjs.send('service_eul2je5', 'template_57i9ce9', templateParams)
+                        .then(function(response) {
+                            // Success
+                            formStatus.style.display = 'block';
+                            formStatus.style.color = '#0071e3';
+                            formStatus.innerHTML = '✓ Nachricht erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden bei Ihnen.';
+                            
+                            // Reset form
+                            contactForm.reset();
+                            
+                            // Reset button
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Nachricht senden';
+                            
+                            // Hide status message after 5 seconds
+                            setTimeout(() => {
+                                formStatus.style.display = 'none';
+                            }, 5000);
+                        }, function(error) {
+                            // Error
+                            formStatus.style.display = 'block';
+                            formStatus.style.color = '#ff6b6b';
+                            formStatus.innerHTML = '✕ Fehler beim Senden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt: firas.khedhiri@icloud.com';
+                            
+                            // Reset button
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Nachricht senden';
+                            
+                            console.error('EmailJS error:', error);
+                        });
                 });
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ 
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '0';
-                    entry.target.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        entry.target.style.transition = 'all 0.8s ease';
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, 50);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(0, 0, 0, 0.95)';
             } else {
-                nav.style.background = 'rgba(0, 0, 0, 0.8)';
+                console.error('Contact form not found');
+            }
+
+            // Smooth scrolling with error checking
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            if (anchorLinks.length > 0) {
+                anchorLinks.forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href');
+                        const target = document.querySelector(targetId);
+                        if (target) {
+                            target.scrollIntoView({ 
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            }
+
+            // Intersection Observer for fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            if (fadeElements.length > 0) {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '0';
+                            entry.target.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                entry.target.style.transition = 'all 0.8s ease';
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                            }, 50);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                fadeElements.forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            // Navbar background on scroll
+            const nav = document.querySelector('nav');
+            if (nav) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        nav.style.background = 'rgba(0, 0, 0, 0.95)';
+                    } else {
+                        nav.style.background = 'rgba(0, 0, 0, 0.8)';
+                    }
+                });
             }
         });
     </script>
 </body>
 </html>
-
